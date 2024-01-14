@@ -1,0 +1,116 @@
+
+                                   <!-- HELLO FROM THE OTHER WORLD :) #THIS_IS_SHROUK :)  -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY CALCULATOR</title>
+    <style>
+        /* Styles for the calculator UI */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+            
+        .calculator {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+         /* Style for Screen */
+        .calculator-screen {
+            width: 100%;
+            height: 60px;
+            font-size: 2rem;
+            text-align: right;
+            padding: 0.5rem;
+            border: none;
+            outline: none;
+        }
+            /* Style for buttons */
+        .calculator-keys {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1px;
+        }
+
+        /* Styles for calculator buttons */
+        button {
+            border: none;
+            outline: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+            padding: 1rem;
+            background-color: #f1f1f1;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        button.operator {
+            background-color: #ff8c00;
+            color: #fff;
+        }
+
+        button.double {
+            grid-column: span 2;
+        }
+
+        button.tall {
+            grid-row: span 2;
+        }
+
+        button:hover {
+            background-color: #e0e0e0;
+        }
+
+        .is-depressed {
+            background-color: #ccc !important;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Calculator UI -->
+    <div class="calculator">
+        <!-- Display screen -->
+        <input type="text" class="calculator-screen" id="display" disabled>
+        <!-- Calculator keys -->
+        <div class="calculator-keys">
+            <!-- Numeric buttons -->
+            <button>7</button>
+            <button>8</button>
+            <button>9</button>
+            <!-- Operator buttons -->
+            <!-- This the formal international order BTW -->
+            <button class="operator" data-action="divide">/</button>
+            <button>4</button>
+            <button>5</button>
+            <button>6</button>
+            <button class="operator" data-action="multiply">*</button>
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+            <button class="operator" data-action="subtract">-</button>
+            <button class="double">0</button>
+            <button class="operator" data-action="decimal">.</button>
+            <button class="operator" data-action="add">+</button>
+            <!-- Calculate button -->
+            <button class="double operator tall" data-action="calculate">=</button>
+            <!-- Delete button -->
+            <button class="double operator" data-action="delete">Del</button>
+        </div>
+    </div>
+
+    <!-- <script src="./js.js"></script> -->
+</body>
+
+</html>
